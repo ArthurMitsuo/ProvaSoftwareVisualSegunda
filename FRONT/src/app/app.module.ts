@@ -4,6 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from './app.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+import {MatInputModule} from '@angular/material/input';
+import {MatTableModule} from '@angular/material/table';
+import { FormsModule } from "@angular/forms"
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { ListarComponent } from './pages/tarefa/listar/listar.component';
 import { CadastrarComponent } from './pages/tarefa/cadastrar/cadastrar.component';
 import { AlterarComponent } from './pages/tarefa/alterar/alterar.component';
@@ -25,6 +32,13 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     NoopAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
+    MatTableModule,
+    MatSnackBarModule,
+    MatInputModule,
+    MatSelectModule,
+    MatRadioModule,
+    MatButtonModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

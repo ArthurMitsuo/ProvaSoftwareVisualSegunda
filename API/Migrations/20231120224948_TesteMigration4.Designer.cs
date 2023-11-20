@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20231120220657_TesteMigration3")]
-    partial class TesteMigration3
+    [Migration("20231120224948_TesteMigration4")]
+    partial class TesteMigration4
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,19 +39,19 @@ namespace API.Migrations
                         new
                         {
                             CategoriaId = 1,
-                            CriadoEm = new DateTime(2023, 11, 21, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9026),
+                            CriadoEm = new DateTime(2023, 11, 21, 19, 49, 48, 337, DateTimeKind.Local).AddTicks(1657),
                             Nome = "Trabalho"
                         },
                         new
                         {
                             CategoriaId = 2,
-                            CriadoEm = new DateTime(2023, 11, 22, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9029),
+                            CriadoEm = new DateTime(2023, 11, 22, 19, 49, 48, 337, DateTimeKind.Local).AddTicks(1661),
                             Nome = "Estudos"
                         },
                         new
                         {
                             CategoriaId = 3,
-                            CriadoEm = new DateTime(2023, 11, 23, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9031),
+                            CriadoEm = new DateTime(2023, 11, 23, 19, 49, 48, 337, DateTimeKind.Local).AddTicks(1662),
                             Nome = "Lazer"
                         });
                 });
@@ -72,7 +72,6 @@ namespace API.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Status")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Titulo")
@@ -84,31 +83,32 @@ namespace API.Migrations
 
                     b.ToTable("Tarefas");
 
-                    b.HasDiscriminator<string>("Status").HasValue("Não Iniciada");
-
                     b.HasData(
                         new
                         {
                             TarefaId = 1,
                             CategoriaId = 1,
-                            CriadoEm = new DateTime(2023, 11, 27, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9080),
+                            CriadoEm = new DateTime(2023, 11, 27, 19, 49, 48, 337, DateTimeKind.Local).AddTicks(1730),
                             Descricao = "Terminar relatório para reunião",
+                            Status = "Não Iniciada",
                             Titulo = "Concluir relatório"
                         },
                         new
                         {
                             TarefaId = 2,
                             CategoriaId = 2,
-                            CriadoEm = new DateTime(2023, 11, 23, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9082),
+                            CriadoEm = new DateTime(2023, 11, 23, 19, 49, 48, 337, DateTimeKind.Local).AddTicks(1731),
                             Descricao = "Preparar-se para a aula de Angular",
+                            Status = "Não Iniciada",
                             Titulo = "Estudar Angular"
                         },
                         new
                         {
                             TarefaId = 3,
                             CategoriaId = 3,
-                            CriadoEm = new DateTime(2023, 12, 4, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9083),
+                            CriadoEm = new DateTime(2023, 12, 4, 19, 49, 48, 337, DateTimeKind.Local).AddTicks(1733),
                             Descricao = "Dar um passeio relaxante no parque",
+                            Status = "Não Iniciada",
                             Titulo = "Passeio no parque"
                         });
                 });

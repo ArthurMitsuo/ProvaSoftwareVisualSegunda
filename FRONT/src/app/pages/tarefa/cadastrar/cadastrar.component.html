@@ -1,0 +1,28 @@
+<p>
+    cadastrar works!
+</p>
+<form class="example-form">
+  <table class="example-full-width" cellspacing="0"><tr>
+    <td><mat-form-field class="example-full-width" id="titulo">
+      <mat-label>Título</mat-label>
+      <input matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="titulo">
+    </mat-form-field></td>
+    
+    <td><mat-form-field class="example-full-width" id="descricao">
+      <mat-label>Descrição</mat-label>
+      <input matInput [ngModelOptions]="{standalone: true}" [(ngModel)]="descricao">
+    </mat-form-field></td>
+  </tr></table>
+
+  <mat-form-field appearance="fill" id="categoriaId">
+    <mat-label>Categoria</mat-label>
+    <mat-select>
+      <mat-option>--</mat-option>
+      <mat-option [ngModelOptions]="{standalone: true}" [(ngModel)]="categoriaId" *ngFor="let c of categorias" [value]="c.categoriaId">
+        {{c.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button (click)="cadastrar()" mat-raised-button color="accent">Accent</button>
+</form>

@@ -1,9 +1,10 @@
 import { Categoria } from './categoria.model';
 
 export interface Tarefa{
-    tarefaId: number,
+    tarefaId?: number,
     titulo: string,
     descricao: string,
-    status: string,
-    Categoria: Categoria
+    status?: string,
+    categoria?: Categoria
+    categoriaId: number
 }
