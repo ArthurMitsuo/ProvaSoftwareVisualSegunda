@@ -13,9 +13,10 @@ public class AppDataContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {    
-         modelBuilder.Entity<Tarefa>()
+        //Atribui o valor de Não Iniciada como valor inicial para o atributo Status
+        /* modelBuilder.Entity<Tarefa>()
             .HasDiscriminator<string>("Status")
-            .HasValue<Tarefa>("Não Iniciada");
+            .HasValue<Tarefa>("Não Iniciada");*/
     
         modelBuilder.Entity<Categoria>().HasData(
             new Categoria { CategoriaId = 1, Nome = "Trabalho", CriadoEm = DateTime.Now.AddDays(1) },

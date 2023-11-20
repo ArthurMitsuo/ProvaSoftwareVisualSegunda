@@ -56,16 +56,17 @@ public class TarefaController : ControllerBase
 
     // PATCH: api/tarefa/listar - não sei bem como funciona AINDA
     [HttpPatch]
-    [Route("alterar")]
-    public async Task<IActionResult> alterar([FromRoute] int idTarefa)
+    [Route("alterar/{idTarefa}")]
+    public async Task<IActionResult> Alterar([FromRoute] int idTarefa)
     {
         try
         {
+            //POR ALGUM MOTIVO, NÃO ESTÁ CONSEGUINDO BUSCAR A TAREFA
             Tarefa? tarefa = await _context.Tarefas
                 .FirstOrDefaultAsync(x => x.TarefaId == idTarefa);
 
             if(tarefa == null){
-                return NotFound("Nenhuma tarefa encontrada");
+                return NotFound("Tarefa não encontrada");
             }
 
             if(tarefa.Status == "Não Iniciada"){

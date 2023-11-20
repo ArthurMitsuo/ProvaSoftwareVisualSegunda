@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace API.Migrations
 {
     [DbContext(typeof(AppDataContext))]
-    [Migration("20231120215833_TesteMigration2")]
-    partial class TesteMigration2
+    [Migration("20231120220657_TesteMigration3")]
+    partial class TesteMigration3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -39,19 +39,19 @@ namespace API.Migrations
                         new
                         {
                             CategoriaId = 1,
-                            CriadoEm = new DateTime(2023, 11, 21, 18, 58, 33, 23, DateTimeKind.Local).AddTicks(9900),
+                            CriadoEm = new DateTime(2023, 11, 21, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9026),
                             Nome = "Trabalho"
                         },
                         new
                         {
                             CategoriaId = 2,
-                            CriadoEm = new DateTime(2023, 11, 22, 18, 58, 33, 23, DateTimeKind.Local).AddTicks(9904),
+                            CriadoEm = new DateTime(2023, 11, 22, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9029),
                             Nome = "Estudos"
                         },
                         new
                         {
                             CategoriaId = 3,
-                            CriadoEm = new DateTime(2023, 11, 23, 18, 58, 33, 23, DateTimeKind.Local).AddTicks(9905),
+                            CriadoEm = new DateTime(2023, 11, 23, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9031),
                             Nome = "Lazer"
                         });
                 });
@@ -91,7 +91,7 @@ namespace API.Migrations
                         {
                             TarefaId = 1,
                             CategoriaId = 1,
-                            CriadoEm = new DateTime(2023, 11, 27, 18, 58, 33, 23, DateTimeKind.Local).AddTicks(9945),
+                            CriadoEm = new DateTime(2023, 11, 27, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9080),
                             Descricao = "Terminar relatório para reunião",
                             Titulo = "Concluir relatório"
                         },
@@ -99,7 +99,7 @@ namespace API.Migrations
                         {
                             TarefaId = 2,
                             CategoriaId = 2,
-                            CriadoEm = new DateTime(2023, 11, 23, 18, 58, 33, 23, DateTimeKind.Local).AddTicks(9946),
+                            CriadoEm = new DateTime(2023, 11, 23, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9082),
                             Descricao = "Preparar-se para a aula de Angular",
                             Titulo = "Estudar Angular"
                         },
@@ -107,7 +107,7 @@ namespace API.Migrations
                         {
                             TarefaId = 3,
                             CategoriaId = 3,
-                            CriadoEm = new DateTime(2023, 12, 4, 18, 58, 33, 23, DateTimeKind.Local).AddTicks(9947),
+                            CriadoEm = new DateTime(2023, 12, 4, 19, 6, 57, 578, DateTimeKind.Local).AddTicks(9083),
                             Descricao = "Dar um passeio relaxante no parque",
                             Titulo = "Passeio no parque"
                         });
