@@ -1,5 +1,6 @@
 <!--Componente do Angular Materials-->
-<table mat-table id="tabelaListarTarefas" [dataSource]="tarefas" class="mat-elevation-z8">
+<mat-card>
+  <table mat-table id="tabelaListarTarefas" [dataSource]="tarefas" class="mat-elevation-z8">
 
     <ng-container matColumnDef="tarefaId">
       <th mat-header-cell *matHeaderCellDef> ID </th>
@@ -32,3 +33,4 @@
     <tr mat-header-row *matHeaderRowDef="colunasTabelaListar"></tr>
     <tr mat-row *matRowDef="let row; columns: colunasTabelaListar;"></tr>
   </table>
+</mat-card>
