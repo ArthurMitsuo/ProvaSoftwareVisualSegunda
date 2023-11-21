@@ -9,7 +9,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatTableModule} from '@angular/material/table';
-import { FormsModule } from "@angular/forms"
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from "@angular/forms";
+import {MatCardModule} from '@angular/material/card';
 import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { ListarComponent } from './pages/tarefa/listar/listar.component';
 import { CadastrarComponent } from './pages/tarefa/cadastrar/cadastrar.component';
@@ -38,7 +40,9 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MatSelectModule,
     MatRadioModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatFormFieldModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

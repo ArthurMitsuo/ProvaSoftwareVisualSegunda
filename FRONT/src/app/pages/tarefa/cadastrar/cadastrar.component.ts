@@ -57,8 +57,7 @@ export class CadastrarComponent implements OnInit {
         this.categoria = categoria;
       }
     })
-    console.log("ESTÁ AQUI")
-    console.log(this.categoriaId)
+    
     let tarefa: Tarefa = {
       titulo: this.titulo,
       descricao: this.descricao,
@@ -75,13 +74,7 @@ export class CadastrarComponent implements OnInit {
       .subscribe({
         next: (tarefa) => {
           this.snackBar.open(
-            "Tarefa cadastrada com sucesso!!",
-            "E-commerce",
-            {
-              duration: 1500,
-              horizontalPosition: "right",
-              verticalPosition: "top",
-            }
+            "Tarefa cadastrada com sucesso!!"
           );
           this.router.navigate(["pages/tarefa/listar"]);
         },
