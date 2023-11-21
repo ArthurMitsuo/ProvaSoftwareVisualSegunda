@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { ListarComponent } from './pages/tarefa/listar/listar.component';
 import { CadastrarComponent } from './pages/tarefa/cadastrar/cadastrar.component';
 import { AlterarComponent } from './pages/tarefa/alterar/alterar.component';
+import { ListarconcluidasComponent } from './pages/tarefa/listarconcluidas/listarconcluidas.component';
+import { ListarnaoconcluidasComponent } from './pages/tarefa/listarnaoconcluidas/listarnaoconcluidas.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,15 @@ const routes: Routes = [
   {
     path: 'pages/tarefa/alterar',
     component: AlterarComponent
+  }
+  ,
+  {
+    path: 'pages/tarefa/concluidas',
+    component: ListarconcluidasComponent
+  },
+  {
+    path: 'pages/tarefa/naoconcluidas',
+    component: ListarnaoconcluidasComponent
   }
 ];
 
